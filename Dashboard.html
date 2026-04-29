@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cyber Hacker Dashboard</title>
+
+<link rel="stylesheet" href="dashboard.css">
+
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<canvas id="matrix"></canvas>
+
+<div class="dashboard">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>⚡ CYBER</h2>
+
+    <p id="userName"></p>
+    <p id="lastLogin"></p>
+
+    <hr>
+
+    <p onclick="showSection('dashboard')">📊 Dashboard</p>
+    <p onclick="showSection('scan')">📄 Scan Data</p>
+    <p onclick="showSection('threats')">⚠ Threat Details</p>
+    <p onclick="showSection('logs')">📜 Logs</p>
+
+    <hr>
+
+    <p onclick="goScanner()">🔍 Scanner</p>
+    <p onclick="logout()">🚪 Logout</p>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <h1>💻 Hacker Dashboard</h1>
+
+    <div id="clock"></div>
+
+    <!-- CARDS -->
+    <div class="cards">
+      <div class="card">
+        <h3>🔍 Scans</h3>
+        <p id="scanCount">0</p>
+      </div>
+
+      <div class="card danger">
+        <h3>🚨 Threats</h3>
+        <p id="threatCount">0</p>
+      </div>
+    </div>
+
+    <!-- PROGRESS -->
+    <div class="progress">
+      <div id="progressBar"></div>
+    </div>
+
+    <p id="successRate"></p>
+
+    <canvas id="chart"></canvas>
+
+    <!-- AI -->
+    <div class="ai-box"></div>
+
+    <!-- 🔥 DYNAMIC CONTENT -->
+    <div id="dynamicContent" class="dynamic-content">
+      🚀 Welcome to Cyber Dashboard
+    </div>
+
+    <!-- HISTORY -->
+    <div class="history">
+      <h3>🕘 Activity</h3>
+      <ul id="historyList"></ul>
+    </div>
+
+  </div>
+</div>
+
+<!-- ALERT -->
+<div id="alertBox" class="alert hidden">🚨 Threat Detected!</div>
+<audio id="alertSound" src="https://www.soundjay.com/buttons/sounds/beep-07.mp3"></audio>
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>

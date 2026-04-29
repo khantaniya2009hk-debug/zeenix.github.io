@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cyber Security Scanner</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Scanner.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+</head>
+
+<body>
+
+<canvas id="matrix"></canvas>
+
+<div class="container">
+
+    <h1>🧠CYBER SCAN SYSTEM</h1>
+
+    <!-- URL -->
+    <div class="card">
+        <h2>🌐 URL Detector</h2>
+        <input type="text" id="urlInput" placeholder="Enter URL...">
+        <button onclick="checkURL()">Analyze URL</button>
+    </div>
+
+    <div id="loader" class="hidden">⏳ Processing...</div>
+
+    <div id="aiScan" class="hidden">
+        <p id="scanText"></p>
+    </div>
+
+    <div id="result" class="result-box"></div>
+
+    <div class="progress-bar">
+        <div id="progress"></div>
+    </div>
+
+    <!-- Message -->
+    <div class="card">
+        <h2>📩 Message Detector</h2>
+        <textarea id="messageInput" placeholder="Paste message..."></textarea>
+        <button onclick="checkMessage()">Analyze Message</button>
+        <div id="msgResult" class="result-box"></div>
+    </div>
+
+    <!-- PDF -->
+    <div class="card">
+        <h2>📄 PDF Detector</h2>
+        <input type="file" id="pdfInput" accept="application/pdf">
+        <button onclick="checkPDF()">Scan PDF</button>
+        <div id="pdfResult" class="result-box"></div>
+    </div>
+
+    <!-- QR Scanner -->
+
+<div class="card">
+    <h2>📷 QR Code Detector</h2>
+
+    <div id="reader" style="width:300px;"></div>
+
+    <!-- ✅ FIXED FUNCTION NAME -->
+    <button onclick="startScanner()">Start Scan</button>
+    <button onclick="stopScanner()">Stop Scan</button>
+
+    <hr>
+
+    <input type="file" id="qrImageInput">
+    <button onclick="scanQRImage()">Scan Uploaded QR</button>
+   <div id="qrResult"></div>
+
+    <!--QR Preveiw-->
+    <img id="qrPreveiw" style="width: 150px; display: none; margin-top:10px;">
+    <!-- RESULT BOX -->
+
+
+</div>
+
+
+<audio id="scanSound" src="https://www.soundjay.com/buttons/sounds/button-3.mp3"></audio>
+
+<!-- ✅ IMPORTANT -->
+<script src="https://unpkg.com/html5-qrcode"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script>
+
+<script src="Scanner.js"></script>
+
+
+    
+</body>
+</html>

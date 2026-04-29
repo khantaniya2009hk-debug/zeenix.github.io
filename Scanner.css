@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    font-family: 'Share Tech Mono', monospace;
+    background: linear-gradient(135deg, #00000084, #000000, #000000a0);
+    color: #10f0e8;
+    text-align: center;
+     
+}
+
+
+/* MATRIX */
+canvas {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    opacity: 0.18; /*IMPORTANT (reduce brigthness)*/ 
+    filter: blur(0.5px);
+    background-color: rgb(255, 255, 255);
+}
+
+/* CONTAINER */
+.container {
+    width: 420px;
+    margin: auto;
+    padding: 20px;
+}
+
+*{
+  box-sizing: border-box;  
+}
+
+/* HEADING */
+h1 {
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc;
+}
+
+/* CARD UI */
+.card {
+    background: rgba(0,0,0,0.7);
+    border: 1px solid #00ffcc;
+    border-radius: 12px;
+    padding: 15px;
+    margin-top: 15px;
+    box-shadow: 0 0 15px #00ffcc;
+}
+
+/* INPUT */
+input, textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-top: 10px;
+    background: black;
+    color: white;
+    border: 2px solid #00ffcc;
+    border-radius: 5px;
+    display: block;
+
+}
+
+/* BUTTON */
+button {
+    margin-top: 10px;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    background: linear-gradient(45deg, #00ffcc, #00ff99);
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s;
+    box-sizing: border-box;
+}
+
+button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 15px #00ffcc;
+}
+
+/* RESULT BOX */
+.result-box {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 6px;
+    background: rgba(0,255,204,0.1);
+    border: 1px solid #00ffcc;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: 0.4s;
+    overflow: hidden;
+}
+
+.result-box.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* PROGRESS */
+.progress-bar {
+    height: 8px;
+    background: #003333;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+#progress {
+    height: 100%;
+    width: 0%;
+    background: #00ffcc;
+    border-radius: 10px;
+    transition: width 1.5s;
+}
+
+/* AI TEXT */
+#aiScan {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#scanText::after {
+    content: "|";
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.hidden {
+    display: none;
+}
+
+h1{
+    margin-top: 20px;
+}
+
+#reader{
+    width: 300px;
+    margin: auto;
+}
+
+.safe{
+    color: lightgreen;
+    border-color: 2px solid green;
+
+
+}
+
+.danger{
+    color: red;
+    border: 2px solid red;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
